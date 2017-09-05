@@ -19,7 +19,7 @@ public class CameraFollow : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        mycam.orthographicSize = (Screen.height / 100f / 4f); //can be 2f instead
+        mycam.orthographicSize = (Screen.height / 100f / 5f); //can be 2f or 4f instead. 5f is good! (Increased number = closer camera)
         if (target)
         {   //moves the camera
             transform.position = Vector3.Lerp(transform.position, target.position, m_speed) + new Vector3(0, 0, -10); //avoids the camera from moving in z-position 
