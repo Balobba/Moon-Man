@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGhostController : MonoBehaviour {
+public class EnemyPatrolController : MonoBehaviour {
 
     private Rigidbody2D rbody;
     private Animator anim;

@@ -21,7 +21,7 @@ public class ScreenFader : MonoBehaviour {
         {
             yield return null;
         }
-        Debug.Log("CLEAR");
+        
         
     }
 
@@ -34,7 +34,7 @@ public class ScreenFader : MonoBehaviour {
         {
             yield return null;
         }
-        Debug.Log("BLACK");
+        
     }
 
     void AnimationComplete() //This function is called at the end of the animation
