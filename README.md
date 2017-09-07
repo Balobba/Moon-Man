@@ -1,2 +1,2 @@
 # Moon-Man
-Game project for course TDD23
+Game project for course TDDD23
