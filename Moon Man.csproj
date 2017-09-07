@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\EnemyChaseController.cs" />
     <Compile Include="Assets\Scripts\EnemyPatrolController.cs" />
+    <Compile Include="Assets\Scripts\HurtEnemy.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ScreenFader.cs" />
     <Compile Include="Assets\Scripts\Warp.cs" />
