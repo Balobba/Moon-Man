@@ -7,6 +7,11 @@ public class HurtEnemy : MonoBehaviour
 
     //public CircleCollider2D enemyBody;
 
+
+    public int damageToGive;
+    public GameObject damageBurst;
+    public Transform hitPoint;
+
     // Use this for initialization
     void Start()
     {
@@ -22,21 +27,14 @@ public class HurtEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        /*
-                if(other.gameObject == enemyBody)
-                {
-                    Destroy(other.gameObject); //FUNKAR INTE JUST NU
-
-                }
-                */
-
+       
         
-            if (other.tag == "Enemy")
+            if (other.gameObject.tag == "Enemy")
             {
-                Destroy(other.gameObject); //Kills it
-
-
-            }
+            //Destroy(other.gameObject); //Kills it
+            other.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(damageToGive);
+            Instantiate(damageBurst, hitPoint.position, hitPoint.rotation);
+        }
         
         
 
