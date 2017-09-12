@@ -22,6 +22,7 @@ public class RegenZone : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+      //  playerHealth = GetComponent<PlayerHealthManager>();
 
     }
 
