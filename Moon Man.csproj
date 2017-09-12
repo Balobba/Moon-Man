@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\EnemyChaseController.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthManager.cs" />
     <Compile Include="Assets\Scripts\EnemyPatrolController.cs" />
+    <Compile Include="Assets\Scripts\EnemyStaticController.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HurtEnemy.cs" />
     <Compile Include="Assets\Scripts\HurtPlayer.cs" />

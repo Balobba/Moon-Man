@@ -12,16 +12,12 @@ public class RegenZone : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
-            //ScreenFader sf = GameObject.FindGameObjectWithTag("Fader").GetComponent<ScreenFader>();
-
+           
             playerHealth.RegenerateOxygenandHealth();
 
         }
     }
-
-
-
-
+    
 
     // Use this for initialization
     void Start()

@@ -14,11 +14,20 @@ public class PlayerHealthManager : MonoBehaviour { //Keeps track of the players 
     public float oxygenLossValue;
     public float oxygenRegenValue;
 
+    private bool flashing;
+    public float flashLenght;
+    private float flashCounter;
+    private SpriteRenderer playerSprite;
+
+    //private GameManager game;
+
     // Use this for initialization
     void Start () {
 
         playerCurrentHealth = playerMaxHealth;
         playerCurrentOxygen = playerMaxOxygen;
+        playerSprite = GetComponent<SpriteRenderer>();
+        //game = GetComponent<GameManager>();
 		
 	}
 	
@@ -29,11 +38,35 @@ public class PlayerHealthManager : MonoBehaviour { //Keeps track of the players 
         if (playerCurrentHealth <= 0)
         {
             gameObject.SetActive(false);
+            //game.RevivePlayer();
+            
 
         }
 
-
         OxygenLoss();
+
+        if (flashing)
+        {
+            if (flashCounter > flashLenght * 0.66f)
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0f);
+
+            }else if(flashCounter > flashCounter * 0.33f)
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 1f);
+
+            }
+            else if (flashCounter > flashLenght * 0f)
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0f);
+            }
+            else
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 1f);
+                flashing = false;
+            }
+            flashCounter -= Time.deltaTime;
+        }
 
     }
 
@@ -69,7 +102,8 @@ public class PlayerHealthManager : MonoBehaviour { //Keeps track of the players 
     public void HurtPlayer(int damageToPlayer) //Is called when an enemy collides with the player (from HurtPlayer script)
     {
         playerCurrentHealth -= damageToPlayer;
-
+        flashing = true;
+        flashCounter = flashLenght;
     }
 
     public void SetMaxHealth()

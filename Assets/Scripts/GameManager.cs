@@ -6,47 +6,54 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     public float waitToReload;
-    private bool reloading;
-    private GameObject thePlayer;
+    public GameObject thePlayer;
 
 
     // Use this for initialization
     void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+   
+
+    }
 
 
-
-
-        if (reloading)
+    public void RevivePlayer()
+    {
+        waitToReload -= Time.deltaTime;
+        if (waitToReload < 0)
         {
-            waitToReload -= Time.deltaTime;
-            if (waitToReload < 0)
-            {
-                //Application.LoadLevel(Application.loadedLevel); //reloads the level and spawns player where he started
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //another way to to the same thing (loading the scene instead)
-                thePlayer.SetActive(true);
-            }
-
+            //Application.LoadLevel(Application.loadedLevel); //reloads the level and spawns player where he started
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //another way to to the same thing (loading the scene instead)
+            thePlayer.SetActive(true);
         }
 
+    
 
-     
-            /*
-            if (other.gameObject.name == "Player")
-            {
-                //Destroy(other.gameObject);
-                other.gameObject.SetActive(false);
-                reloading = true;
-                thePlayer = other.gameObject;
-            }*/
+         /*if (reloading)
+         {
+             waitToReload -= Time.deltaTime;
+             if (waitToReload < 0)
+             {
+                 //Application.LoadLevel(Application.loadedLevel); //reloads the level and spawns player where he started
+                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //another way to to the same thing (loading the scene instead)
+                 thePlayer.SetActive(true);
+             }
 
+         }
 
+        /*
 
-        
+         if (other.gameObject.name == "Player")
+         {
+             //Destroy(other.gameObject);
+             other.gameObject.SetActive(false);
+             reloading = true;
+             thePlayer = other.gameObject;
+         }*/
 
 
     }

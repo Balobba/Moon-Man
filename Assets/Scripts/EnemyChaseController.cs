@@ -13,6 +13,7 @@ public class EnemyChaseController : MonoBehaviour {
         bool playerInTerritory;
         public Transform target;
         public float speed;
+        public float distanceToTarget;
 
         
 
@@ -24,23 +25,27 @@ public class EnemyChaseController : MonoBehaviour {
         playerInTerritory = false;
         }
 
-   void OnTriggerEnter2D(Collider2D other) //Everything that happens inside circle
+   void OnTriggerStay2D(Collider2D other) //Everything that happens inside circle
     {
-
-        playerInTerritory = true;
+        if(other.gameObject.tag == "Player")
+        {
+            playerInTerritory = true;
+        }
         
 
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        playerInTerritory = false;
-
+        if (other.gameObject.tag == "Player")
+        {
+            playerInTerritory = false;
+        }
     }
 
     void MoveToPlayer()
     {
-        if (Vector3.Distance(transform.position, target.position) > 0.5f)
+        if (Vector3.Distance(transform.position, target.position) > distanceToTarget)
         {
             Vector2 moveDirection = new Vector2((transform.position.x - target.position.x) * speed, (transform.position.y - target.position.y) * speed);
             rbody.velocity = -moveDirection; //walking towards target
@@ -61,7 +66,7 @@ public class EnemyChaseController : MonoBehaviour {
     {
             if (playerInTerritory)
             {
-                Debug.Log("inside circle");
+            //Debug.Log("inside circle");
             MoveToPlayer();
 
 
@@ -70,7 +75,7 @@ public class EnemyChaseController : MonoBehaviour {
             anim.SetBool("is_walking", false);
             rbody.velocity = Vector2.zero;
 
-            Debug.Log("outside circle");
+            //Debug.Log("outside circle");
 
 
         }
