@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HurtPlayer : MonoBehaviour {
+public class HurtPlayer : MonoBehaviour {//This script is attatched to the enemy. 
 
     public int damageToGive;
 
@@ -20,7 +20,7 @@ public class HurtPlayer : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D other)
     {
         
-        if (other.gameObject.name == "Player")
+        if (other.gameObject.name == "Player") //Once the enemy collides with the player
         {
             other.gameObject.GetComponent<PlayerHealthManager>().HurtPlayer(damageToGive);
         }

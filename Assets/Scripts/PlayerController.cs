@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour {//Contains all movements of the player, including attacks and animations
 
     Rigidbody2D rbody;
     Animator anim;
@@ -25,9 +25,6 @@ public class PlayerController : MonoBehaviour {
         if (!attacking)
         {
 
-
-
-
             float playermovementspeed = 3; //the speed of the player character (3 is good for now)
             Vector2 movement_vector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
             if (movement_vector != Vector2.zero)
@@ -42,9 +39,7 @@ public class PlayerController : MonoBehaviour {
             }
 
             rbody.MovePosition(rbody.position + movement_vector * Time.deltaTime);
-            //Debug.Log(Time.deltaTime);
-
-
+            
 
             if (Input.GetKeyDown(KeyCode.J))
             {
@@ -69,7 +64,6 @@ public class PlayerController : MonoBehaviour {
         {
             attacking = false;
             anim.SetBool("is_attacking", false);
-            //attackTimeCounter = attackTime;
 
         }
 

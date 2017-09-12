@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScreenFader : MonoBehaviour {
+public class ScreenFader : MonoBehaviour { //Controlls the fade animations (when warping)
 
     Animator anim;
     public bool isFading = false;

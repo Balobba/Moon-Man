@@ -3,23 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour {
+public class UIManager : MonoBehaviour { //The script that controlls all UI displayed
 
 
     public Slider healthBar;
     public Text healthBarText;
     public PlayerHealthManager playerHealth;
+    
 
 
     public Slider oxygenBar;
-    public int oxygenValue;
-    public float oxygenLossValue;
+
 
 
 	// Use this for initialization
 	void Start () {
 
-        oxygenBar.maxValue = oxygenValue;
 	}
 	
 	// Update is called once per frame
@@ -28,16 +27,10 @@ public class UIManager : MonoBehaviour {
         healthBar.value = playerHealth.playerCurrentHealth;
         healthBarText.text = "HP: " + playerHealth.playerCurrentHealth + "/" + playerHealth.playerMaxHealth;
 
+        oxygenBar.value = playerHealth.playerCurrentOxygen; //Updates the oxygenbar according to the players oxygen level
 
 
-        oxygenBar.value -= oxygenLossValue;
-        if(oxygenBar.value == 0)
-        {
-            playerHealth.playerCurrentHealth = 0;
+    }
 
 
-        }
-
-
-	}
 }

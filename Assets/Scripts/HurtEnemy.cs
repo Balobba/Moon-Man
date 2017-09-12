@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HurtEnemy : MonoBehaviour
+public class HurtEnemy : MonoBehaviour //This script is attatched to any weapon that the player is carrying
 {
 
     //public CircleCollider2D enemyBody;
@@ -26,9 +26,7 @@ public class HurtEnemy : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other)
-    {
-       
-        
+    {        
             if (other.gameObject.tag == "Enemy")
             {
             //Destroy(other.gameObject); //Kills it

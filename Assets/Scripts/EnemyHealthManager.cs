@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealthManager : MonoBehaviour {
+public class EnemyHealthManager : MonoBehaviour //Keeps track of the enemy max health and current health
+{
 
     public int EnemyMaxHealth;
     public int EnemyCurrentHealth;
@@ -26,11 +27,7 @@ public class EnemyHealthManager : MonoBehaviour {
 
 
         }
-
-
-
     }
-
 
     public void HurtEnemy(int damageToPlayer)
     {
