@@ -16,13 +16,29 @@ public class QuestManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-        if(questCompleted.Length == quests.Length)
+
+        if (IsAllMissionComplete())
         {
-            Debug.Log("GRATTIS PIERRE DU VANN!");
+            Debug.Log("YOU WON THE GAME!");
+
 
         }
 
 
 	}
+
+
+    private bool IsAllMissionComplete()
+    {
+        for (int i = 0; i < questCompleted.Length; ++i)
+        {
+            if (questCompleted[i] == false)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
 }

@@ -8,6 +8,8 @@ public class QuestItem : MonoBehaviour {
     private QuestManager theQM;
     public string itemName;
 
+    public GameObject itemCollectEffect;
+
 	// Use this for initialization
 	void Start () {
         theQM = FindObjectOfType<QuestManager>();
@@ -31,7 +33,10 @@ public class QuestItem : MonoBehaviour {
                     theQM.itemCollected = itemName;
                     gameObject.SetActive(false);
                     Debug.Log("PLOCKADE UPP ITEM");
-                    
+
+                    Instantiate(itemCollectEffect, transform.position, transform.rotation);//particle effect when picking up item
+
+
 
                 }
             }
