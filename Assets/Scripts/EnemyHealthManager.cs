@@ -24,8 +24,6 @@ public class EnemyHealthManager : MonoBehaviour //Keeps track of the enemy max h
         if (EnemyCurrentHealth <= 0)
         {
             Destroy(gameObject);
-
-
         }
     }
 
