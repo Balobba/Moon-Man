@@ -91,14 +91,17 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HurtEnemy.cs" />
     <Compile Include="Assets\Scripts\HurtPlayer.cs" />
+    <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerHealthManager.cs" />
     <Compile Include="Assets\Scripts\QuestItem.cs" />
     <Compile Include="Assets\Scripts\QuestManager.cs" />
     <Compile Include="Assets\Scripts\QuestObject.cs" />
     <Compile Include="Assets\Scripts\QuestTrigger.cs" />
+    <Compile Include="Assets\Scripts\QuitOnClick.cs" />
     <Compile Include="Assets\Scripts\RegenZone.cs" />
     <Compile Include="Assets\Scripts\ScreenFader.cs" />
+    <Compile Include="Assets\Scripts\SelectOnInput.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Warp.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\CircleObject.cs" />
@@ -117,6 +120,17 @@
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledInitialShaderProperties.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledMap.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TmxObject.cs" />
+    <Compile Include="Assets\UI Main Menu\Scripts\ActiveStateToggler.cs" />
+    <Compile Include="Assets\UI Main Menu\Scripts\ApplicationManager.cs" />
+    <Compile Include="Assets\UI Main Menu\Scripts\ChangeColor.cs" />
+    <Compile Include="Assets\UI Main Menu\Scripts\DragMe.cs" />
+    <Compile Include="Assets\UI Main Menu\Scripts\DragPanel.cs" />
+    <Compile Include="Assets\UI Main Menu\Scripts\DropMe.cs" />
+    <Compile Include="Assets\UI Main Menu\Scripts\PanelManager.cs" />
+    <Compile Include="Assets\UI Main Menu\Scripts\ResizePanel.cs" />
+    <Compile Include="Assets\UI Main Menu\Scripts\ScrollDetailTexture.cs" />
+    <Compile Include="Assets\UI Main Menu\Scripts\ShowSliderValue.cs" />
+    <Compile Include="Assets\UI Main Menu\Scripts\TiltWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />
