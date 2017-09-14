@@ -73,13 +73,18 @@ public class PlayerHealthManager : MonoBehaviour { //Keeps track of the players 
 
     public void OxygenLoss()
     {
-        playerCurrentOxygen -= oxygenLossValue;
-
-        if (playerCurrentOxygen <= 0)
+        if(Time.timeScale != 0)
         {
-            playerCurrentHealth = 0; //Player dies
-            //gameObject.SetActive(false);
+            playerCurrentOxygen -= oxygenLossValue;
+
+            if (playerCurrentOxygen <= 0)
+            {
+                playerCurrentHealth = 0; //Player dies
+                                         //gameObject.SetActive(false);
+            }
+
         }
+
 
     }
 

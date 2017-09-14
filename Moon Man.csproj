@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\ContinuousParticlesPauseMenu.cs" />
     <Compile Include="Assets\Scripts\EnemyChaseController.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthManager.cs" />
     <Compile Include="Assets\Scripts\EnemyPatrolController.cs" />
@@ -100,6 +101,7 @@
     <Compile Include="Assets\Scripts\QuestTrigger.cs" />
     <Compile Include="Assets\Scripts\QuitOnClick.cs" />
     <Compile Include="Assets\Scripts\RegenZone.cs" />
+    <Compile Include="Assets\Scripts\ResumeSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\ScreenFader.cs" />
     <Compile Include="Assets\Scripts\SelectOnInput.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
