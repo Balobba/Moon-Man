@@ -17,9 +17,11 @@ public class GameManager : MonoBehaviour
     private int tempHP;
     private float tempOxygen;
 
+    public int gameOverIndex;
+
     void Start()
     {
-        
+       // thePlayer.GetComponent<PlayerHealthManager>();
 
     }
 
@@ -41,6 +43,8 @@ public class GameManager : MonoBehaviour
             }
 
         }
+
+
     }
 
     private void PauseGame()
@@ -66,15 +70,37 @@ public class GameManager : MonoBehaviour
     }
 
 
+    public void GameOver()
+    {
+        
+        waitToReload -= Time.deltaTime;
+        if (waitToReload < 0)
+        {
+            Debug.Log("INNE I GAME OVER IF");
+            
+            SceneManager.LoadScene(gameOverIndex);
+            thePlayer.SetActive(true);
+            
 
-    public void RevivePlayer()
+            //Application.LoadLevel(Application.loadedLevel); //reloads the level and spawns player where he started
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //another way to to the same thing (loading the scene instead)
+            
+        }
+
+    }
+
+
+    public void RevivePlayer() //temporary function for reviving player in the same scene
     {
         waitToReload -= Time.deltaTime;
         if (waitToReload < 0)
         {
+            thePlayer.SetActive(true);
+            Debug.Log("INNE I REVIVE!");
+
             //Application.LoadLevel(Application.loadedLevel); //reloads the level and spawns player where he started
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //another way to to the same thing (loading the scene instead)
-            thePlayer.SetActive(true);
+            
         }
 
 

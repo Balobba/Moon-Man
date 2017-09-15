@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealthManager : MonoBehaviour { //Keeps track of the players max health and current health
+
+public class PlayerHealthManager : MonoBehaviour
+{ //Keeps track of the players max health and current health
 
     public int playerMaxHealth;
     public int playerCurrentHealth;
@@ -17,31 +19,58 @@ public class PlayerHealthManager : MonoBehaviour { //Keeps track of the players 
     private bool flashing;
     public float flashLenght;
     private float flashCounter;
+
+    public float fadeLossValue;
+
     private SpriteRenderer playerSprite;
 
-    //private GameManager game;
+    public GameManager game;
+
+    private PlayerController playerController;
+    private SpriteRenderer[] weaponSprite; //spriterenderer array for all childs of player (aka weapon)
+    Animator animator;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
 
         playerCurrentHealth = playerMaxHealth;
         playerCurrentOxygen = playerMaxOxygen;
         playerSprite = GetComponent<SpriteRenderer>();
-        //game = GetComponent<GameManager>();
-		
-	}
-	
-	// Update is called once per frame
+        playerController = GetComponent<PlayerController>();
+        weaponSprite = GetComponentsInChildren<SpriteRenderer>();
+        animator = gameObject.GetComponent<Animator>();
 
-	void Update () {
+    }
+
+    // Update is called once per frame
+
+    void Update()
+    {
 
         if (playerCurrentHealth <= 0)
         {
-            gameObject.SetActive(false);
-            //game.RevivePlayer();
-            
+
+            game.GameOver();
+
+            animator.SetTrigger("is_dead");
+
+            playerController.enabled = false;
+
+
+            playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, playerSprite.color.a - fadeLossValue);
+            weaponSprite[1].color = new Color(weaponSprite[1].color.r, weaponSprite[1].color.g, weaponSprite[1].color.b, weaponSprite[1].color.a - fadeLossValue);
+            if (playerSprite.color.a <= 0)
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0);
+                weaponSprite[1].color = new Color(weaponSprite[1].color.r, weaponSprite[1].color.g, weaponSprite[1].color.b, 0);
+            }
 
         }
+
+
+
+
 
         OxygenLoss();
 
@@ -51,7 +80,8 @@ public class PlayerHealthManager : MonoBehaviour { //Keeps track of the players 
             {
                 playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0f);
 
-            }else if(flashCounter > flashCounter * 0.33f)
+            }
+            else if (flashCounter > flashCounter * 0.33f)
             {
                 playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 1f);
 
@@ -73,14 +103,14 @@ public class PlayerHealthManager : MonoBehaviour { //Keeps track of the players 
 
     public void OxygenLoss()
     {
-        if(Time.timeScale != 0)
+        if (Time.timeScale != 0)
         {
             playerCurrentOxygen -= oxygenLossValue;
 
             if (playerCurrentOxygen <= 0)
             {
                 playerCurrentHealth = 0; //Player dies
-                                         //gameObject.SetActive(false);
+                                        
             }
 
         }
@@ -90,7 +120,8 @@ public class PlayerHealthManager : MonoBehaviour { //Keeps track of the players 
 
     public void RegenerateOxygenandHealth()
     {
-        if (playerCurrentOxygen < playerMaxOxygen) {
+        if (playerCurrentOxygen < playerMaxOxygen)
+        {
 
             playerCurrentOxygen += oxygenRegenValue;
         }
@@ -100,7 +131,7 @@ public class PlayerHealthManager : MonoBehaviour { //Keeps track of the players 
         {
             playerCurrentHealth += healthRegenValue;
         }
-        
+
     }
 
 
