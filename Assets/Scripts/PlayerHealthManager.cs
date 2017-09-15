@@ -6,9 +6,9 @@ using UnityEngine;
 public class PlayerHealthManager : MonoBehaviour
 { //Keeps track of the players max health and current health
 
-    public int playerMaxHealth;
-    public int playerCurrentHealth;
-    public int healthRegenValue;
+    public float playerMaxHealth;
+    public float playerCurrentHealth;
+    public float healthRegenValue;
 
 
     public float playerMaxOxygen;
@@ -17,7 +17,7 @@ public class PlayerHealthManager : MonoBehaviour
     public float oxygenRegenValue;
 
     private bool flashing;
-    public float flashLenght;
+    public float flashLength;
     private float flashCounter;
 
     public float fadeLossValue;
@@ -29,6 +29,7 @@ public class PlayerHealthManager : MonoBehaviour
     private PlayerController playerController;
     private SpriteRenderer[] weaponSprite; //spriterenderer array for all childs of player (aka weapon)
     Animator animator;
+
 
     // Use this for initialization
     void Start()
@@ -65,39 +66,52 @@ public class PlayerHealthManager : MonoBehaviour
                 playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0);
                 weaponSprite[1].color = new Color(weaponSprite[1].color.r, weaponSprite[1].color.g, weaponSprite[1].color.b, 0);
             }
-
         }
 
-
-
-
+        Flashing();
 
         OxygenLoss();
+    }
+    public void StartFlash()
+    {
+        if (!flashing)
+        {
+            flashing = true;
+            flashCounter = flashLength;
+        }
+    }
+
+    public void Flashing() //This function is always called in the update loop but is only activated by StartFlash();
+    {
 
         if (flashing)
         {
-            if (flashCounter > flashLenght * 0.66f)
+            if (flashCounter > flashLength * 0.66f)
             {
                 playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0f);
+                weaponSprite[1].color = new Color(weaponSprite[1].color.r, weaponSprite[1].color.g, weaponSprite[1].color.b, 0f);
 
             }
-            else if (flashCounter > flashCounter * 0.33f)
+           else if (flashCounter > flashLength * 0.33f)
             {
                 playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 1f);
 
+                weaponSprite[1].color = new Color(weaponSprite[1].color.r, weaponSprite[1].color.g, weaponSprite[1].color.b, 1f);
+
             }
-            else if (flashCounter > flashLenght * 0f)
+            else if (flashCounter > flashLength * 0f)
             {
                 playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0f);
+                weaponSprite[1].color = new Color(weaponSprite[1].color.r, weaponSprite[1].color.g, weaponSprite[1].color.b, 0f);
             }
             else
             {
                 playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 1f);
+                weaponSprite[1].color = new Color(weaponSprite[1].color.r, weaponSprite[1].color.g, weaponSprite[1].color.b, 1f);
                 flashing = false;
             }
             flashCounter -= Time.deltaTime;
         }
-
     }
 
 
@@ -109,14 +123,13 @@ public class PlayerHealthManager : MonoBehaviour
 
             if (playerCurrentOxygen <= 0)
             {
-                playerCurrentHealth = 0; //Player dies
-                                        
+                
+                HurtPlayer(oxygenLossValue);
             }
 
         }
-
-
     }
+
 
     public void RegenerateOxygenandHealth()
     {
@@ -135,11 +148,10 @@ public class PlayerHealthManager : MonoBehaviour
     }
 
 
-    public void HurtPlayer(int damageToPlayer) //Is called when an enemy collides with the player (from HurtPlayer script)
+    public void HurtPlayer(float damageToPlayer) //Is called when an enemy collides with the player (from HurtPlayer script)
     {
         playerCurrentHealth -= damageToPlayer;
-        flashing = true;
-        flashCounter = flashLenght;
+        StartFlash();
     }
 
     public void SetMaxHealth()
