@@ -176,7 +176,6 @@
     <None Include="Assets\Light2D\Resources\Shaders\Light80.shader" />
     <None Include="Assets\Light2D\Resources\Shaders\Light9.shader" />
     <None Include="Assets\Light2D\Resources\Shaders\Light90.shader" />
-    <None Include="Assets\Light2D\Resources\Shaders\LightAuto.shader" />
     <None Include="Assets\Light2D\Resources\Shaders\LightBase.cginc" />
     <None Include="Assets\Light2D\Resources\Shaders\LightBlender.shader" />
     <None Include="Assets\Light2D\Resources\Shaders\LightIgnoreObstacles.shader" />
