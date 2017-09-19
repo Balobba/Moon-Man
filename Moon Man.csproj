@@ -126,6 +126,8 @@
     <Compile Include="Assets\Scripts\HurtEnemy.cs" />
     <Compile Include="Assets\Scripts\HurtPlayer.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
+    <Compile Include="Assets\Scripts\MusicController.cs" />
+    <Compile Include="Assets\Scripts\MusicSwitcher.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerHealthManager.cs" />
     <Compile Include="Assets\Scripts\QuestItem.cs" />
