@@ -20,7 +20,7 @@ public class VolumeController : MonoBehaviour
         masterMixer.SetFloat("musicvol", PlayerPrefs.GetFloat("SliderMusicVolumeLevel"));
         musicSlider.value = PlayerPrefs.GetFloat("SliderMusicVolumeLevel");
 
-        Debug.Log("INSIDE START VOLUMECONTROL ");
+        //Debug.Log("INSIDE START VOLUMECONTROL ");
 
     }
 
