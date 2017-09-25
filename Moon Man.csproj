@@ -117,8 +117,10 @@
     <Compile Include="Assets\Light2D\Scripts\ObstacleCameraPostPorcessor.cs" />
     <Compile Include="Assets\Light2D\Scripts\Point2.cs" />
     <Compile Include="Assets\Light2D\Scripts\Util.cs" />
+    <Compile Include="Assets\Scripts\BulletController.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\ContinuousParticlesPauseMenu.cs" />
+    <Compile Include="Assets\Scripts\EnemyChaseAndShootController.cs" />
     <Compile Include="Assets\Scripts\EnemyChaseController.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthManager.cs" />
     <Compile Include="Assets\Scripts\EnemyPatrolController.cs" />
