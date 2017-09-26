@@ -10,6 +10,7 @@ public class QuestTrigger : MonoBehaviour {
     public bool startQuest;
     public bool endQuest;
 
+
 	// Use this for initialization
 	void Start () {
         theQM = FindObjectOfType<QuestManager>();

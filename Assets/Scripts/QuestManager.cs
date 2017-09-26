@@ -9,6 +9,8 @@ public class QuestManager : MonoBehaviour {
 
     public string itemCollected;//A string to identify collected items (for quests)
 
+    public GameObject spaceshipDoorLeft; //The spaceship warper thats on the left side. Locked until all quests are complete
+
 	// Use this for initialization
 	void Start () {
         questCompleted = new bool[quests.Length];
@@ -19,9 +21,8 @@ public class QuestManager : MonoBehaviour {
 
         if (IsAllMissionComplete())
         {
-            Debug.Log("YOU WON THE GAME!");
-
-
+            //Debug.Log("YOU WON THE GAME!");
+            spaceshipDoorLeft.SetActive(true);
         }
 
 

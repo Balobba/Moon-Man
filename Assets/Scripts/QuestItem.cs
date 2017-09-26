@@ -10,8 +10,13 @@ public class QuestItem : MonoBehaviour {
 
     public GameObject itemCollectEffect;
 
-	// Use this for initialization
-	void Start () {
+    public GameObject greenLight;
+    public GameObject redLight;
+    public GameObject greenLightDoor;
+    public GameObject redLightDoor;
+
+    // Use this for initialization
+    void Start () {
         theQM = FindObjectOfType<QuestManager>();
 		
 	}
@@ -35,6 +40,12 @@ public class QuestItem : MonoBehaviour {
                     Debug.Log("PLOCKADE UPP ITEM");
 
                     Instantiate(itemCollectEffect, transform.position, transform.rotation);//particle effect when picking up item
+
+                    //Colors in spaceship that indicated successful retreat of item
+                    greenLight.gameObject.SetActive(true);
+                    greenLightDoor.gameObject.SetActive(true);
+                    redLight.gameObject.SetActive(false);
+                    redLightDoor.gameObject.SetActive(false);
 
 
 
