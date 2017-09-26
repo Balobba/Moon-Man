@@ -200,6 +200,7 @@
     <None Include="Assets\Light2D\Resources\Shaders\TransparentNormalMapped.shader" />
     <None Include="Assets\Light2D\changelog.txt" />
     <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />
+    <None Include="Assets\Tiled2Unity\Imported\desertmap.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\moonoutsideship.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\spaceship inside.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\License.txt" />
