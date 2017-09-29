@@ -10,10 +10,11 @@ public class PlayerController : MonoBehaviour {//Contains all movements of the p
     private bool attacking;
     public float attackTime;
     private float attackTimeCounter;
+    public float playermovementspeed; //the speed of the player character (3 or 4 is good for now)
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         rbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         
@@ -22,10 +23,8 @@ public class PlayerController : MonoBehaviour {//Contains all movements of the p
 	// Update is called once per frame
 	void Update ()
     {
-            if (!attacking)
+            if (!attacking) // add !spinning later
             {
-
-                float playermovementspeed = 3; //the speed of the player character (3 is good for now)
                 Vector2 movement_vector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
                 if (movement_vector != Vector2.zero)
                 {
@@ -41,7 +40,7 @@ public class PlayerController : MonoBehaviour {//Contains all movements of the p
                 rbody.MovePosition(rbody.position + movement_vector * Time.deltaTime);
 
 
-                if (Input.GetKeyDown(KeyCode.J))
+                if (Input.GetKeyDown(KeyCode.Space)) //keybinding for attacking
                 {
                     attackTimeCounter = attackTime;
                     attacking = true;

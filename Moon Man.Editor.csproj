@@ -188,6 +188,11 @@
     <None Include="Assets\Light2D\Resources\Shaders\TransparentNormalMapped.shader" />
     <None Include="Assets\Light2D\changelog.txt" />
     <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />
+    <None Include="Assets\Tiled2Unity\Imported\caveswest.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\caveswestfloor1.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\caveswestfloor2.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\caveswestfloor3.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\caveswestfloor4.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\desertmap.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\moonoutsideship.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\robotfactoryeast.tiled2unity.xml" />
