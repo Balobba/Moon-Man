@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 2017-09-29 15:15:05-->
+<!--Last exported: 2017-10-01 12:11:03-->
 <Tiled2Unity version="1.0.11.2">
   <AssignMaterial mesh="mesh_0001" material="terrain" />
   <AssignMaterial mesh="mesh_0002" material="terrain" />
@@ -23,8 +23,8 @@
       <GameObject name="terrain_atlas" copy="mesh_0003" sortingLayerName="" sortingOrder="2" opacity="1" />
     </GameObject>
     <GameObject name="alphabet" x="0" y="0" z="0">
-      <TileLayer opacity="0.39" offsetX="0" offsetY="0" />
-      <GameObject name="towerDefense_tilesheet" copy="mesh_0004" sortingLayerName="" sortingOrder="3" opacity="0.39" />
+      <TileLayer opacity="1" offsetX="0" offsetY="0" />
+      <GameObject name="towerDefense_tilesheet" copy="mesh_0004" sortingLayerName="" sortingOrder="3" opacity="1" />
     </GameObject>
     <GameObject name="teleporters" x="0" y="0" z="0">
       <TileLayer opacity="1" offsetX="0" offsetY="0" />

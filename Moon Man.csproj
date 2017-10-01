@@ -117,9 +117,11 @@
     <Compile Include="Assets\Light2D\Scripts\ObstacleCameraPostPorcessor.cs" />
     <Compile Include="Assets\Light2D\Scripts\Point2.cs" />
     <Compile Include="Assets\Light2D\Scripts\Util.cs" />
+    <Compile Include="Assets\Scripts\BrightnessController.cs" />
     <Compile Include="Assets\Scripts\BulletController.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\ContinuousParticlesPauseMenu.cs" />
+    <Compile Include="Assets\Scripts\DarknessController.cs" />
     <Compile Include="Assets\Scripts\EnemyChaseAndShootController.cs" />
     <Compile Include="Assets\Scripts\EnemyChaseController.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthManager.cs" />
@@ -207,6 +209,7 @@
     <None Include="Assets\Tiled2Unity\Imported\caveswestfloor4.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\desertmap.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\moonoutsideship.tiled2unity.xml" />
+    <None Include="Assets\Tiled2Unity\Imported\prebossfight.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\robotfactoryeast.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\spaceship inside.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\License.txt" />
