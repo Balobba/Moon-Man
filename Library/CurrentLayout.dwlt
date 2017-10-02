@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 521}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -105,10 +105,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 683, y: 492}
+  m_MinSize: {x: 679, y: 471}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 1
-  controlID: 148
+  controlID: 10662
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -129,10 +129,10 @@ MonoBehaviour:
     y: 0
     width: 1366
     height: 635
-  m_MinSize: {x: 683, y: 492}
+  m_MinSize: {x: 679, y: 471}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 149
+  controlID: 10663
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -153,10 +153,10 @@ MonoBehaviour:
     y: 0
     width: 724
     height: 635
-  m_MinSize: {x: 202, y: 442}
-  m_MaxSize: {x: 4002, y: 8042}
+  m_MinSize: {x: 202, y: 421}
+  m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 150
+  controlID: 10664
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -228,10 +228,10 @@ MonoBehaviour:
     y: 0
     width: 642
     height: 635
-  m_MinSize: {x: 481, y: 492}
+  m_MinSize: {x: 477, y: 471}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 103
+  controlID: 10699
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,10 +252,10 @@ MonoBehaviour:
     y: 0
     width: 642
     height: 364
-  m_MinSize: {x: 481, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 477, y: 200}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 87
+  controlID: 10636
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -358,7 +358,7 @@ MonoBehaviour:
     y: 412
     width: 722
     height: 294
-  m_MaximizeOnPlay: 1
+  m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -435,14 +435,14 @@ MonoBehaviour:
     width: 722
     height: 299
   m_SceneLighting: 0
-  lastFramingTime: 7961.95086659967
+  lastFramingTime: 4843.154429643567
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 541.82733, y: -240.62909, z: 0}
+    m_Target: {x: 540.50397, y: -240.80481, z: -0.05078125}
     speed: 2
-    m_Value: {x: 541.82733, y: -240.62909, z: 0}
+    m_Value: {x: 540.50397, y: -240.80481, z: -0.05078125}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -469,9 +469,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.3346405
+    m_Target: 6.2806883
     speed: 2
-    m_Value: 6.3346405
+    m_Value: 6.2806883
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -587,9 +587,9 @@ MonoBehaviour:
     height: 343
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8a050000
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: dafbffffdcfbffff00000000
+    m_ExpandedIDs: 683bf0ff2841f0ffda88f0ff84c0f0ffc604f1ff9c44f1ffe46df1ff38b0f1ff46d8f1ff324cf2ff8c51f2ffb4a2f2fff0a9f2ff0aaaf2ff46c4f2ffe0ebf2ff74a4f3ff0cacf3ff0eacf3ffe2c5f3ff40e3f3ff42e3f3ff3ef1f3ff40f1f3ffb20df4ff9a12f4ff5c31f4ffce31f4ff4032f4ffb232f4ff2a33f4ffa235f4ffd438f4ff0605f5ffbe6af5ffee5cf9ff84a7f9ffc2d9f9ff1cdaf9ff9483faff00defaffca30fbff4a6efbff168bfbff8430fcfffce6fcff022bfdfffc16feffb2adffff6af4ffffdafbffffdcfbfffff4ffffff00000000dec9020004f5020024f5020086fe0200141d030058a2050062a20500fa580600908407009a84070028850700c0600800
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -610,6 +610,7 @@ MonoBehaviour:
   m_ExpandedScenes:
   - mainmenuscene
   - scene
+  - ENDBOSSscene
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -683,19 +684,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Oscar\Unity Projects\Moon Man
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 622c0000
-    m_LastClickedID: 11362
-    m_ExpandedIDs: 00000000d62500000c260000442600001c27000046270000ac290000bc2900002a2b0000762b0000142c0000fe2c0000fc3b0000ffffff7f
+    m_SelectedIDs: d8250000
+    m_LastClickedID: 9688
+    m_ExpandedIDs: 00000000d82500000e260000462600001e27000048270000ae290000be2900002c2b0000782b0000162c0000002d0000fc3b0000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -723,7 +724,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d62500000c260000442600001c27000046270000ac290000bc2900002a2b0000762b0000142c0000fe2c0000fc3b0000
+    m_ExpandedIDs: 00000000d82500000e260000462600001e27000048270000ae290000be290000da2a00002c2b0000782b0000162c0000002d0000fc3b0000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -775,7 +776,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 60}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_DirectoriesAreaWidth: 211
 --- !u!114 &21

@@ -20,10 +20,30 @@ public class GameManager : MonoBehaviour
 
     public int gameOverIndex;
 
+    private VolumeController theVC;//IF I FEEL LIKE SOLVING THE MUSIC BUG
+
+    public static bool gmExists;
+
     void Start()
     {
-       // thePlayer.GetComponent<PlayerHealthManager>();
+        {
+            if (!gmExists)
+            {
+                gmExists = true;
+                DontDestroyOnLoad(transform.gameObject);
 
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+
+        }
+
+
+        // thePlayer.GetComponent<PlayerHealthManager>();
+        DontDestroyOnLoad(pauseScreen); //This makes the user be able to pause between scenes
+        theVC = GetComponent<VolumeController>(); //IF I FEEL LIKE SOLVING THE MUSIC BUG
     }
 
     void Update()
@@ -77,7 +97,6 @@ public class GameManager : MonoBehaviour
         waitToReload -= Time.deltaTime;
         if (waitToReload < 0)
         {
-            Debug.Log("INNE I GAME OVER IF");
             
             SceneManager.LoadScene(gameOverIndex);
             thePlayer.SetActive(true);

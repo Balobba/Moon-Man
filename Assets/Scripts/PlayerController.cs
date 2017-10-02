@@ -10,11 +10,12 @@ public class PlayerController : MonoBehaviour {//Contains all movements of the p
     private bool attacking;
     public float attackTime;
     private float attackTimeCounter;
-    public float playermovementspeed; //the speed of the player character (3 or 4 is good for now)
+    public float playerMovementSpeed; //the speed of the player character (1 is good for now. Increases when in bossbattle)
 
 
     // Use this for initialization
     void Start () {
+
         rbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         
@@ -37,7 +38,7 @@ public class PlayerController : MonoBehaviour {//Contains all movements of the p
                     anim.SetBool("is_walking", false);
                 }
 
-                rbody.MovePosition(rbody.position + movement_vector * Time.deltaTime);
+                rbody.MovePosition(rbody.position + movement_vector * Time.deltaTime * playerMovementSpeed);
 
 
                 if (Input.GetKeyDown(KeyCode.Space)) //keybinding for attacking

@@ -130,6 +130,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HurtEnemy.cs" />
     <Compile Include="Assets\Scripts\HurtPlayer.cs" />
+    <Compile Include="Assets\Scripts\LoadBossSceneOnTrigger.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\MusicController.cs" />
     <Compile Include="Assets\Scripts\MusicSwitcher.cs" />
@@ -202,6 +203,7 @@
     <None Include="Assets\Light2D\Resources\Shaders\TransparentDualColorNormalMapped.shader" />
     <None Include="Assets\Light2D\Resources\Shaders\TransparentNormalMapped.shader" />
     <None Include="Assets\Light2D\changelog.txt" />
+    <None Include="Assets\Tiled2Unity\Imported\BOSSFIGHT.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />
     <None Include="Assets\Tiled2Unity\Imported\caveswest.tiled2unity.xml" />
     <None Include="Assets\Tiled2Unity\Imported\caveswestfloor1.tiled2unity.xml" />
