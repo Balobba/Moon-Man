@@ -11,7 +11,10 @@ public class BrightnessController: MonoBehaviour {
     // Use this for initialization
     private void OnTriggerEnter2D(Collider2D other)
     {
-        lightingCamera.backgroundColor = new Color(0.082f, 0.082f, 0.082f, 0f); //makes the game normal background lighting color
 
+        if (other.transform.tag == "Player")
+        {
+            lightingCamera.backgroundColor = new Color(0.082f, 0.082f, 0.082f, 0f); //makes the game normal background lighting color
+        }
     }
 }

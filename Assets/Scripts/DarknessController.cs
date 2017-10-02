@@ -10,7 +10,9 @@ public class DarknessController : MonoBehaviour {
     // Use this for initialization
     private void OnTriggerEnter2D(Collider2D other)
     {
-        lightingCamera.backgroundColor = new Color(0f, 0f, 0f, 5f); //makes the game pitch black
-        
+        if (other.transform.tag == "Player")
+        {
+            lightingCamera.backgroundColor = new Color(0f, 0f, 0f, 5f); //makes the game pitch black
+        }
     }
 }

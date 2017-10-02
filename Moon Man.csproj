@@ -120,6 +120,7 @@
     <Compile Include="Assets\Scripts\BrightnessController.cs" />
     <Compile Include="Assets\Scripts\BulletController.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\ColorChangeTrigger.cs" />
     <Compile Include="Assets\Scripts\ContinuousParticlesPauseMenu.cs" />
     <Compile Include="Assets\Scripts\DarknessController.cs" />
     <Compile Include="Assets\Scripts\EnemyChaseAndShootController.cs" />
