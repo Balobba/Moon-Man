@@ -130,6 +130,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HurtEnemy.cs" />
     <Compile Include="Assets\Scripts\HurtPlayer.cs" />
+    <Compile Include="Assets\Scripts\InitPlayer.cs" />
     <Compile Include="Assets\Scripts\LoadBossSceneOnTrigger.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\MusicController.cs" />

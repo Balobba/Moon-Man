@@ -7,6 +7,7 @@ public class LoadBossSceneOnTrigger : MonoBehaviour {
 
     private PlayerController playerCntrl;
     private PlayerHealthManager playerHealth;
+    public Camera mainCamera;
 
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -25,20 +26,13 @@ public class LoadBossSceneOnTrigger : MonoBehaviour {
             playerCntrl.playerMovementSpeed = playerCntrl.playerMovementSpeed * 1.5f; //Increases player movementspeed in bossfight
             playerHealth.oxygenLossValue = 0f; //Stops decreasing of oxygen
             playerHealth.SetMaxHealth(); //fills up health to max
-            
 
-            DontDestroyOnLoad(other.gameObject); //Doesn't destroy the player when loading into another scene
             
-            LoadByIndex(4); //Loading boss stage
+            mainCamera.GetComponent<CameraFollow>().cameraZoom = 1.5f; //zooms the camera out
+
+
         }
     }
 
-
-    public void LoadByIndex(int sceneIndex)
-    {
-        SceneManager.LoadScene(sceneIndex);
-
-
-    }
 
 }

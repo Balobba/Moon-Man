@@ -70,7 +70,7 @@ public class MusicController : MonoBehaviour
     {
         PlayerPrefs.SetFloat("SliderMusicVolumeLevel", savedMusicVol); //Saves slider value to a global variable PlayerPrefs
 
-        Debug.Log("music volume is: " + PlayerPrefs.GetFloat("SliderMusicVolumeLevel"));
+        //Debug.Log("music volume is: " + PlayerPrefs.GetFloat("SliderMusicVolumeLevel"));
         //Debug.Log("savedMusicVol: " + savedMusicVol);
     }
 

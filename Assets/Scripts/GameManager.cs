@@ -24,9 +24,12 @@ public class GameManager : MonoBehaviour
 
     public static bool gmExists;
 
+    public bool isGameOver;
+
+
     void Start()
     {
-        {
+      /*  {
             if (!gmExists)
             {
                 gmExists = true;
@@ -39,10 +42,10 @@ public class GameManager : MonoBehaviour
             }
 
         }
-
+        */
 
         // thePlayer.GetComponent<PlayerHealthManager>();
-        DontDestroyOnLoad(pauseScreen); //This makes the user be able to pause between scenes
+        //DontDestroyOnLoad(pauseScreen); //This makes the user be able to pause between scenes
         theVC = GetComponent<VolumeController>(); //IF I FEEL LIKE SOLVING THE MUSIC BUG
     }
 
@@ -62,6 +65,12 @@ public class GameManager : MonoBehaviour
 
                 ResumeGame();
             }
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            SceneManager.LoadScene(1);
 
         }
 
@@ -93,19 +102,28 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        if (!isGameOver)
+        {
+            isGameOver = true;
+
+
+        }
         
         waitToReload -= Time.deltaTime;
         if (waitToReload < 0)
         {
             
-            SceneManager.LoadScene(gameOverIndex);
-            thePlayer.SetActive(true);
             
+            isGameOver = false;
+            thePlayer.SetActive(false);
+            
+            SceneManager.LoadScene(gameOverIndex);
 
             //Application.LoadLevel(Application.loadedLevel); //reloads the level and spawns player where he started
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //another way to to the same thing (loading the scene instead)
-            
+
         }
+
 
     }
 
