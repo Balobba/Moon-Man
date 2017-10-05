@@ -30,7 +30,7 @@ public class BossHealthManager : MonoBehaviour {
         {
             animator.SetTrigger("is_dead");
 
-            Destroy(gameObject);
+            Destroy(gameObject, 5);
             //ADD WIN CONDITION (maybe cut to win scene/cutscene with last item?)
         }
     }

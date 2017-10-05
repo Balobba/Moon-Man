@@ -10,6 +10,7 @@ public class BulletController : MonoBehaviour
     Vector2 direction;
     Vector2 bulletDirection;
     public int bulletDamage;
+    public int surviveTime;
 
     private void Start()
     {
@@ -22,7 +23,7 @@ public class BulletController : MonoBehaviour
 
         rbody.AddForce(bulletDirection * speed);
 
-        Destroy(gameObject, 2);
+        Destroy(gameObject, surviveTime);
 
 
 
