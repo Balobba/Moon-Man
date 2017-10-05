@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
 
     public static bool gmExists;
 
-    public bool isGameOver;
 
 
     void Start()
@@ -102,19 +101,12 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        if (!isGameOver)
-        {
-            isGameOver = true;
 
-
-        }
         
         waitToReload -= Time.deltaTime;
         if (waitToReload < 0)
         {
             
-            
-            isGameOver = false;
             thePlayer.SetActive(false);
             
             SceneManager.LoadScene(gameOverIndex);

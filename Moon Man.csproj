@@ -117,6 +117,9 @@
     <Compile Include="Assets\Light2D\Scripts\ObstacleCameraPostPorcessor.cs" />
     <Compile Include="Assets\Light2D\Scripts\Point2.cs" />
     <Compile Include="Assets\Light2D\Scripts\Util.cs" />
+    <Compile Include="Assets\Scripts\BossController.cs" />
+    <Compile Include="Assets\Scripts\BossHealthManager.cs" />
+    <Compile Include="Assets\Scripts\BossLighting.cs" />
     <Compile Include="Assets\Scripts\BrightnessController.cs" />
     <Compile Include="Assets\Scripts\BulletController.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />

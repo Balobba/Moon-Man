@@ -13,7 +13,7 @@ public class EnemyHealthManager : MonoBehaviour //Keeps track of the enemy max h
     void Start()
     {
 
-        EnemyCurrentHealth = EnemyMaxHealth;
+        SetMaxHealth();
 
     }
 
