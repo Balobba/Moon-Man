@@ -13,11 +13,14 @@ public class BossController : MonoBehaviour { //DO ALL BOSS SEQUENCES HERE (MOVE
     public float bossMovementSpeed;
 
     public Transform[] spots;
-    public Transform projectileSource;
+    public Transform projectileSourceBlue;
+    public Transform projectileSourceRed;
 
     public GameObject projectile;
+    public GameObject projectileRed;
+    public GameObject[] enemies;
 
-    public Transform target; //TESTING
+    public Transform target; //TESTING. IS GOING TO BE PLAYER LATER!
 
 
     // Use this for initialization
@@ -31,63 +34,153 @@ public class BossController : MonoBehaviour { //DO ALL BOSS SEQUENCES HERE (MOVE
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+
+    }
 
 
     void FireBullets()
     {
 
-        GameObject bullet = Instantiate(projectile, projectileSource.position, projectileSource.rotation);
-        float randomX = Random.Range(0, 360);
-        float randomY = Random.Range(0, 360);
+        GameObject bullet = Instantiate(projectile, projectileSourceBlue.position, projectileSourceBlue.rotation);
+        //float randomX = Random.Range(0, 360);
+        //float randomY = Random.Range(0, 360);
 
-        Vector2 randomDir = new Vector2(randomX, randomY);
+        //Vector2 randomDir = new Vector2(randomX, randomY);
+        Vector2 randomDir = Random.insideUnitCircle;
 
-        Vector2 direction = target.transform.position - bullet.transform.position;
+        //Vector2 direction = target.transform.position - bullet.transform.position;
         bullet.GetComponent<BossBulletController>().SetDirection(randomDir);
-
-        Debug.Log("INSIDE FIREBULLETS!");
 
     }
 
 
-    IEnumerator BossSequence()
+    void FireRedBullets()
     {
 
-        //FIRST ATTACK
+        GameObject bullet = Instantiate(projectileRed, projectileSourceRed.position, projectileSourceRed.rotation);
 
+        Vector2 direction = target.transform.position - bullet.transform.position;
+        bullet.GetComponent<BossBulletController>().SetDirection(direction);
+
+        //Debug.Log("INSIDE FIREBULLETS!");
+
+    }
+
+    void SpawnEnemies() //spawns 2 (for now) enemies around the player
+    {
+        int randomEnemy0 = Random.Range(0,3);
+        int randomEnemy1 = Random.Range(0, 3);
+        //int randomEnemy2 = Random.Range(0, 3);
+        //int randomEnemy3 = Random.Range(0, 3);
+        GameObject enemy0 = Instantiate(enemies[randomEnemy0], new Vector3(target.position.x - 0.5f, target.position.y), Quaternion.identity);
+        GameObject enemy1 = Instantiate(enemies[randomEnemy1], new Vector3(target.position.x + 0.5f, target.position.y), Quaternion.identity);
+        //GameObject enemy2 = Instantiate(enemies[randomEnemy2], new Vector3(target.position.x, target.position.y + 0.5f), Quaternion.identity);
+        //GameObject enemy3 = Instantiate(enemies[randomEnemy3], new Vector3(target.position.x, target.position.y - 0.5f), Quaternion.identity);
+
+    }
+
+
+
+    IEnumerator BossSequence()
+    {
+        anim.SetBool("is_walking", true);
+        //FIRST ATTACK
         while (transform.position != spots[0].position)
         {
+            
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(spots[0].position.x, spots[0].position.y), bossMovementSpeed); //moves towards the location
+            
+           
+
+            yield return null;
+
+        }
+        anim.SetBool("is_walking", false);
+        anim.SetBool("is_attacking", true);
+
+        yield return new WaitForSeconds(1f);
+        Invoke("FireBullets", 2f);
+        yield return new WaitForSeconds(1f);
+        Invoke("FireBullets", 2f);
+        yield return new WaitForSeconds(1f);
+        Invoke("FireBullets", 2f);
+        yield return new WaitForSeconds(1f);
+        Invoke("FireBullets", 2f);
+        yield return new WaitForSeconds(1f);
+        Invoke("FireBullets", 2f);
+        Invoke("FireBullets", 2f);
+        Invoke("FireBullets", 2f);
+        Invoke("FireBullets", 2f);
+        Invoke("FireBullets", 2f);
+        Invoke("FireBullets", 2f);
+        yield return new WaitForSeconds(4f);
+        anim.SetBool("is_attacking", false);
+
+
+        //SECOND ATTACK
+        anim.SetBool("is_walking", true);
+        
+
+        while (transform.position != spots[1].position)
+        {
+            
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(spots[1].position.x, spots[1].position.y), bossMovementSpeed); //moves towards the location
+
+           
+
+            yield return null;
+
+        }
+        anim.SetBool("is_walking", false);
+        anim.SetBool("is_attacking", true);
+
+        Invoke("FireRedBullets", 2f);
+        yield return new WaitForSeconds(4f);
+        Invoke("FireRedBullets", 2f);
+        yield return new WaitForSeconds(4f);
+        anim.SetBool("is_attacking", false);
+
+        //THIRD ATTACK (SPAWN ENEMIES)
+        anim.SetBool("is_walking", true);
+
+        while (transform.position != spots[2].position)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(spots[2].position.x, spots[2].position.y), bossMovementSpeed * 4); //moves towards the location
+            //transform.position = spots[2].transform.position;
+
+
+
+            yield return null;
+
+        }
+        anim.SetBool("is_walking", false);
+
+        anim.SetBool("is_attacking", true);
+
+        Invoke("SpawnEnemies", 1f);
+        yield return new WaitForSeconds(6f);
+        anim.SetBool("is_attacking", false);
+
+        //FOURTH ATTACK (STANDING STILL)
+        anim.SetBool("is_walking", true);
+        while (transform.position != spots[3].position)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(spots[3].position.x, spots[3].position.y), bossMovementSpeed * 4); //moves towards the location
+
 
 
             yield return null;
 
         }
 
-        yield return new WaitForSeconds(1f);
-        Invoke("FireBullets", 2f);
-        yield return new WaitForSeconds(1f);
-        Invoke("FireBullets", 2f);
-        yield return new WaitForSeconds(1f);
-        Invoke("FireBullets", 2f);
-        yield return new WaitForSeconds(1f);
-        Invoke("FireBullets", 2f);
-        yield return new WaitForSeconds(1f);
-        Invoke("FireBullets", 2f);
-        Invoke("FireBullets", 2f);
-        Invoke("FireBullets", 2f);
-        Invoke("FireBullets", 2f);
-        Invoke("FireBullets", 2f);
-        Invoke("FireBullets", 2f);
+        anim.SetBool("is_walking", false);
 
-
-
+        yield return new WaitForSeconds(10f);
 
 
         yield return null;
 
-
+        StartCoroutine("BossSequence");
     }
 }

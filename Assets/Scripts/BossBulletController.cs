@@ -32,9 +32,9 @@ public class BossBulletController : MonoBehaviour
     public void SetDirection(Vector2 direction)
     {
 
-        bulletDirection = Random.insideUnitCircle; 
-        Debug.Log("bulletdirection: " + bulletDirection);
-        //bulletDirection = Vector2.down; //MAYBE AN ALTERNATIVE
+        bulletDirection = direction;
+        //Random.insideUnitCircle;
+        //Debug.Log("bulletdirection: " + bulletDirection);
 
     }
 
