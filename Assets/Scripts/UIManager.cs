@@ -8,8 +8,11 @@ public class UIManager : MonoBehaviour
 
 
     public Slider healthBar;
+    public Slider healthBarBOSS;
     public Text healthBarText;
+    public Text healthBarTextBOSS;
     public PlayerHealthManager playerHealth;
+    public BossHealthManager bossHealth;
 
     public Slider oxygenBar;
     public Text oxygenBarText;
@@ -31,6 +34,14 @@ public class UIManager : MonoBehaviour
         healthBar.maxValue = playerHealth.playerMaxHealth;
         healthBar.value = playerHealth.playerCurrentHealth;
         healthBarText.text = "HP: " + Mathf.Round(playerHealth.playerCurrentHealth) + "/" + Mathf.Round(playerHealth.playerMaxHealth);
+
+
+        healthBarBOSS.maxValue = bossHealth.BossMaxHealth;
+        healthBarBOSS.value = bossHealth.BossCurrentHealth;
+        healthBarTextBOSS.text = "HP: " + Mathf.Round(bossHealth.BossCurrentHealth) + "/" + Mathf.Round(bossHealth.BossMaxHealth);
+
+
+
 
         oxygenBar.value = playerHealth.playerCurrentOxygen; //Updates the oxygenbar according to the players oxygen level
         if (oxygenBar.value <= 0)

@@ -9,6 +9,7 @@ public class LoadBossSceneOnTrigger : MonoBehaviour {
     private PlayerHealthManager playerHealth;
     public Camera mainCamera;
     public GameObject boss;
+    public GameObject bossSlider;
 
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -32,6 +33,8 @@ public class LoadBossSceneOnTrigger : MonoBehaviour {
             mainCamera.GetComponent<CameraFollow>().cameraZoom = 1.5f; //zooms the camera out
 
             boss.SetActive(true);
+            bossSlider.SetActive(true);
+
 
 
         }

@@ -8,27 +8,12 @@ public class InitPlayer : MonoBehaviour {
 
     public Transform spawnPoint;
 
+    private void Awake()
+    {
 
-
-    /*
-    void Start () {
-        if (!playerExists)
-        {
-            playerExists = true;
-            DontDestroyOnLoad(transform.gameObject);
-
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-
-        gameObject.SetActive(true);
-        gameObject.transform.position = spawnPoint.position; //spawns in the right place from start
+        gameObject.transform.position = spawnPoint.position;
 
     }
 
-    */
-    
-	
+
 }

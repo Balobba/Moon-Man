@@ -20,21 +20,17 @@ public class BossHealthManager : MonoBehaviour {
 
     }
 
-    // Update is called once per frame
-    void Update()
+    void Update() //Keep it like this!
     {
 
         if (BossCurrentHealth <= 0)
         {
-            
+            //
             animator.SetTrigger("is_dead");
             bossController.enabled = false;
             game.WonGame();
             Destroy(gameObject, 10);
-
-
-            
-            //ADD WIN CONDITION (maybe cut to win scene/cutscene with last item?)
+            //
         }
     }
 
