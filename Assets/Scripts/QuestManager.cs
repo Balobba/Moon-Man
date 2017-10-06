@@ -7,7 +7,7 @@ public class QuestManager : MonoBehaviour {
     public QuestObject[] quests; //An array of all questobjects
     public bool[] questCompleted;
 
-    public string itemCollected;//A string to identify collected items (for quests)
+    public string itemCollected;//A string to identify collected items (for quests) DON'T REMOVE!
 
     public GameObject spaceshipDoorLeft; //The spaceship warper thats on the left side. Locked until all quests are complete
 
@@ -21,8 +21,9 @@ public class QuestManager : MonoBehaviour {
 
         if (IsAllMissionComplete())
         {
-            //Debug.Log("YOU WON THE GAME!");
             spaceshipDoorLeft.SetActive(true);
+            //CAN ADD RIGHT SPACESHIP DOOR TO FALSE AND TURN ON LIGHTS
+
         }
 
 
