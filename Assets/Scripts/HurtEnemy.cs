@@ -33,6 +33,14 @@ public class HurtEnemy : MonoBehaviour //This script is attatched to any weapon 
             other.gameObject.GetComponent<EnemyHealthManager>().HurtEnemy(damageToGive);
             Instantiate(damageBurst, hitPoint.position, hitPoint.rotation);
         }
+
+            if(other.gameObject.tag == "BOSS")
+        {
+            other.gameObject.GetComponent<BossHealthManager>().HurtEnemy(damageToGive);
+            Instantiate(damageBurst, hitPoint.position, hitPoint.rotation);
+
+
+        }
         
         
 

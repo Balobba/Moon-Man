@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 {
 
     public float waitToReload;
+    public float waitToWin;
+
     public GameObject thePlayer;
 
 
@@ -19,6 +21,7 @@ public class GameManager : MonoBehaviour
     private float tempOxygen;
 
     public int gameOverIndex;
+    public int winIndex;
 
     private VolumeController theVC;//IF I FEEL LIKE SOLVING THE MUSIC BUG
 
@@ -120,43 +123,23 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void RevivePlayer() //temporary function for reviving player in the same scene
+    public void WonGame()
     {
-        waitToReload -= Time.deltaTime;
-        if (waitToReload < 0)
-        {
-            thePlayer.SetActive(true);
-            Debug.Log("INNE I REVIVE!");
 
-            //Application.LoadLevel(Application.loadedLevel); //reloads the level and spawns player where he started
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //another way to to the same thing (loading the scene instead)
+
+        waitToWin -= Time.deltaTime;
+        if (waitToWin < 0)
+        {
+
+            SceneManager.LoadScene(winIndex);
+            thePlayer.SetActive(false);
+
             
-        }
 
-
-
-        /*if (reloading)
-        {
-            waitToReload -= Time.deltaTime;
-            if (waitToReload < 0)
-            {
-                //Application.LoadLevel(Application.loadedLevel); //reloads the level and spawns player where he started
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //another way to to the same thing (loading the scene instead)
-                thePlayer.SetActive(true);
-            }
 
         }
-
-       /*
-
-        if (other.gameObject.name == "Player")
-        {
-            //Destroy(other.gameObject);
-            other.gameObject.SetActive(false);
-            reloading = true;
-            thePlayer = other.gameObject;
-        }*/
-
 
     }
+
+
 }

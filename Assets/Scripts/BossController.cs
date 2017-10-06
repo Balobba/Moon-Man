@@ -67,16 +67,16 @@ public class BossController : MonoBehaviour { //DO ALL BOSS SEQUENCES HERE (MOVE
 
     }
 
-    void SpawnEnemies() //spawns 2 (for now) enemies around the player
+    void SpawnEnemies() //spawns 4 worms (for now) enemies around the player. Can be modified
     {
-        int randomEnemy0 = Random.Range(0,3);
-        int randomEnemy1 = Random.Range(0, 3);
+        //int randomEnemy0 = Random.Range(0,3);
+        //int randomEnemy1 = Random.Range(0, 3);
         //int randomEnemy2 = Random.Range(0, 3);
         //int randomEnemy3 = Random.Range(0, 3);
-        GameObject enemy0 = Instantiate(enemies[randomEnemy0], new Vector3(target.position.x - 0.5f, target.position.y), Quaternion.identity);
-        GameObject enemy1 = Instantiate(enemies[randomEnemy1], new Vector3(target.position.x + 0.5f, target.position.y), Quaternion.identity);
-        //GameObject enemy2 = Instantiate(enemies[randomEnemy2], new Vector3(target.position.x, target.position.y + 0.5f), Quaternion.identity);
-        //GameObject enemy3 = Instantiate(enemies[randomEnemy3], new Vector3(target.position.x, target.position.y - 0.5f), Quaternion.identity);
+        GameObject enemy0 = Instantiate(enemies[2], new Vector3(target.position.x - 0.5f, target.position.y), Quaternion.identity);
+        GameObject enemy1 = Instantiate(enemies[2], new Vector3(target.position.x + 0.5f, target.position.y), Quaternion.identity);
+        GameObject enemy2 = Instantiate(enemies[2], new Vector3(target.position.x, target.position.y + 0.5f), Quaternion.identity);
+        GameObject enemy3 = Instantiate(enemies[2], new Vector3(target.position.x, target.position.y - 0.5f), Quaternion.identity);
 
     }
 

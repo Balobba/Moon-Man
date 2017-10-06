@@ -8,7 +8,6 @@ public class BossHealthManager : MonoBehaviour {
     public int BossCurrentHealth;
 
     private BossController bossController;
-    //private SpriteRenderer BossSprite;
     Animator animator;
     public GameManager game;
 
@@ -17,7 +16,6 @@ public class BossHealthManager : MonoBehaviour {
     {
         bossController = GetComponent<BossController>();
         animator = gameObject.GetComponent<Animator>();
-        //BossSprite = GetComponent<SpriteRenderer>();
         SetMaxHealth();
 
     }
@@ -28,9 +26,14 @@ public class BossHealthManager : MonoBehaviour {
 
         if (BossCurrentHealth <= 0)
         {
+            
             animator.SetTrigger("is_dead");
+            bossController.enabled = false;
+            game.WonGame();
+            Destroy(gameObject, 10);
 
-            Destroy(gameObject, 5);
+
+            
             //ADD WIN CONDITION (maybe cut to win scene/cutscene with last item?)
         }
     }
