@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicSwitcher : MonoBehaviour {
+public class MusicSwitcher : MonoBehaviour { //Switches music when a scene loads
 
 
     private MusicController theMC;
@@ -34,7 +34,7 @@ public class MusicSwitcher : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             theMC.SwitchTrack(newTrack);
-            gameObject.SetActive(false);    //deactivates the triggerbox so the player cant reset the song again
+            //gameObject.SetActive(false);    //deactivates the triggerbox so the player cant reset the song again
 
 
         }
