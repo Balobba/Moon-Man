@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColorChangeTrigger : MonoBehaviour
+public class ColorChangeTrigger : MonoBehaviour //This script changes general lighting when approaching the boss teleporter.
 {
 
     public Camera lightingCamera;

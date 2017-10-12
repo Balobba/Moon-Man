@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyChaseAndShootController : MonoBehaviour
+public class EnemyChaseAndShootController : MonoBehaviour //Applied to enemies that chase the player a certain distance, and fires bullets. In this case the tank
 {
 
     private Rigidbody2D rbody;

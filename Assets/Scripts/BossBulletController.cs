@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossBulletController : MonoBehaviour
+public class BossBulletController : MonoBehaviour //Controlls the projectiles/bullets shot by the boss
 {
 
     private Rigidbody2D rbody;

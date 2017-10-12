@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour //The game manager that controlls the state of the game. 
+    //Includes game over condition, win condition, pause canvas.
 {
 
     public float waitToReload;

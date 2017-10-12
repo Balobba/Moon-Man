@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HurtEnemy : MonoBehaviour //This script is attatched to any weapon that the player is carrying
+public class HurtEnemy : MonoBehaviour //This script is attatched to any weapon that the player is carrying, applying damage to enemies
 {
 
     //public CircleCollider2D enemyBody;

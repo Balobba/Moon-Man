@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossHealthManager : MonoBehaviour {
+public class BossHealthManager : MonoBehaviour { //The health manager of the boss
 
     public int BossMaxHealth;
     public int BossCurrentHealth;

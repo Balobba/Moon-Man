@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossController : MonoBehaviour { //DO ALL BOSS SEQUENCES HERE (MOVEMENT)
+public class BossController : MonoBehaviour { //The sequence (movement) script for the boss
 
     Rigidbody2D rbody;
     Animator anim;

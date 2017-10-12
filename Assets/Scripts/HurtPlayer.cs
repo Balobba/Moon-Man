@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HurtPlayer : MonoBehaviour {//This script is attatched to the enemy. 
+public class HurtPlayer : MonoBehaviour {//This script is attatched to the enemy. Applies damage to player when hit by an enemy
 
     public int damageToGive;
 

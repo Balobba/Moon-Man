@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuitOnClick : MonoBehaviour {
+public class QuitOnClick : MonoBehaviour { //Exits the editor or quits the application
 
     public void Quit()
     {

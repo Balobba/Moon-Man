@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RegenZone : MonoBehaviour
+public class RegenZone : MonoBehaviour //This script is used in a trigger box to regenerate the players hp.
 {
 
     public PlayerHealthManager playerHealth;

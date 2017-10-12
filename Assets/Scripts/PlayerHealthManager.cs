@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 public class PlayerHealthManager : MonoBehaviour
-{ //Keeps track of the players max health and current health
+{ //Keeps track of the players max health and current health as well as animating hits taken
 
     public float playerMaxHealth;
     public float playerCurrentHealth;

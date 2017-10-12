@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Warp : MonoBehaviour {//The script that is applied to all warp zones
+public class Warp : MonoBehaviour {//The script that is applied to all warp zones. Teleports the player from point A to point B
 
     public Transform warpTarget;
 

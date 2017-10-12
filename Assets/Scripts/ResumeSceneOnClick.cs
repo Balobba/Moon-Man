@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ResumeSceneOnClick : MonoBehaviour
+public class ResumeSceneOnClick : MonoBehaviour //Resumes the scene on click. Is used in the pause canvas
 {
 
     public GameManager gameManager;
@@ -18,13 +18,8 @@ public class ResumeSceneOnClick : MonoBehaviour
 
     public void ResumeGame()
     {
-        gameManager.ResumeGame();
+        gameManager.ResumeGame(); //Calls the game manager to unfreeze the game
     }
 
-    /* public void ResumeByIndex(int sceneIndex)
-     {
-         //SceneManager.LoadScene(sceneIndex);
-         //SceneManager.LoadScene(sceneIndex, LoadSceneMode.Additive);
-     }*/
 
 }

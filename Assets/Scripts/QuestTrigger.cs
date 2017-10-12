@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestTrigger : MonoBehaviour {
+public class QuestTrigger : MonoBehaviour { //This is a script that checks if quests are triggered, and sets the quests active
 
 
     private QuestManager theQM;

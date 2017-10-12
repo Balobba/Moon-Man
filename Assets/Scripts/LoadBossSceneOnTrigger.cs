@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadBossSceneOnTrigger : MonoBehaviour {
+public class LoadBossSceneOnTrigger : MonoBehaviour { //This script is to change certain values before the bossfight.
+    //Changes player movement speed, turns of oxygen decreasing, resets hp on player, spawns boss, moves camera back.
 
     private PlayerController playerCntrl;
     private PlayerHealthManager playerHealth;

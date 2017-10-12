@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestItem : MonoBehaviour {
+public class QuestItem : MonoBehaviour { //This script is attached to the actual item. Also turns on lights in spaceship
 
     public int questNumber;
     private QuestManager theQM;

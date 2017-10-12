@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InitPlayer : MonoBehaviour {
+public class InitPlayer : MonoBehaviour { //Initiates the player by spawning it to a specific spawn point
 
     private static bool playerExists;
 

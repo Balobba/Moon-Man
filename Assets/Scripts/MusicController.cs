@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class MusicController : MonoBehaviour
+public class MusicController : MonoBehaviour //The music controller that holds all songs. Can't be destroyed as it is called across scenes to switch music
 {
 
 

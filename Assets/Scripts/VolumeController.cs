@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class VolumeController : MonoBehaviour
+public class VolumeController : MonoBehaviour //This script is used to set the music sliders when the game (in game) starts.
 {
 
 

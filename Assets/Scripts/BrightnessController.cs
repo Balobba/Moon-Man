@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BrightnessController: MonoBehaviour {
+public class BrightnessController: MonoBehaviour { // A lighting script that changes general lighting back to standard lighting 
 
 
     public Camera lightingCamera;

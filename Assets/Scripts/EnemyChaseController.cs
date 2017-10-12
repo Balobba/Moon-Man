@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyChaseController : MonoBehaviour
+public class EnemyChaseController : MonoBehaviour //Movement script for enemies that chase the player
 {
 
     private Rigidbody2D rbody;

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealthManager : MonoBehaviour //Keeps track of the enemy max health and current health
+public class EnemyHealthManager : MonoBehaviour //Keeps track of the enemy max health and current health.
+    //Is called when an enemy takes damage.
 {
 
     public int EnemyMaxHealth;

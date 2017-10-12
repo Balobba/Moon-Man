@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossLighting : MonoBehaviour {
+public class BossLighting : MonoBehaviour { //This script changes the general lighting in the game when you proceed to the boss fight
 
 
     public Camera lightingCamera;

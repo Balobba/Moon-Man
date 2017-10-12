@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DarknessController : MonoBehaviour {
+public class DarknessController : MonoBehaviour { //A lighting script that changes the general lighting to pitch black.
+    //Used in caves
 
     public Camera lightingCamera;
 

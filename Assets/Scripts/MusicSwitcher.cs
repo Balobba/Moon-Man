@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicSwitcher : MonoBehaviour { //Switches music when a scene loads
+public class MusicSwitcher : MonoBehaviour { //Switches music when a new scene loads
 
 
     private MusicController theMC;

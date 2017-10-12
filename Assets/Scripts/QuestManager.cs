@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestManager : MonoBehaviour {
+public class QuestManager : MonoBehaviour { //The questmanager that holds the array of all quests. In this case controlls if the left spaceship door should open or not
 
     public QuestObject[] quests; //An array of all questobjects
     public bool[] questCompleted;
@@ -22,7 +22,7 @@ public class QuestManager : MonoBehaviour {
         if (IsAllMissionComplete())
         {
             spaceshipDoorLeft.SetActive(true);
-            //CAN ADD RIGHT SPACESHIP DOOR TO FALSE AND TURN ON LIGHTS
+            //CAN ADD RIGHT SPACESHIP DOOR TO FALSE AND TURN ON RED LIGHTS
 
         }
 

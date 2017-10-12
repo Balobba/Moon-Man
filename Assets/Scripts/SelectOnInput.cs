@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-public class SelectOnInput : MonoBehaviour {
+public class SelectOnInput : MonoBehaviour { //This script is used to select the menu panels with only the keyboard controllers
 
 
     public EventSystem eventSystem;

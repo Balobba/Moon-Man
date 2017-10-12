@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestObject : MonoBehaviour {
+public class QuestObject : MonoBehaviour { //This script is to check if each quest item is active or has been completed
 
     public int questNumber;
     public QuestManager theQM;
@@ -11,13 +11,7 @@ public class QuestObject : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        /*
-        //TEMPORARY SOLUTION OF QUESTS
-        for(int i = 0; i<theQM.quests.Length; i++)
-        {
-            theQM.quests[i].gameObject.SetActive(true);
-            theQM.quests[i].StartQuest();
-        }*/
+
 		
 	}
 	

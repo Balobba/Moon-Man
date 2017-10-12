@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPatrolController : MonoBehaviour {
+public class EnemyPatrolController : MonoBehaviour { //Applied to the enemies that don't chase the player. Instead patrols in a random direction and pace.
 
     private Rigidbody2D rbody;
     private Animator anim;

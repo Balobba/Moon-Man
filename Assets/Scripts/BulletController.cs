@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public class BulletController : MonoBehaviour //The script for bullets. Sets the direction of the bullets and applies force to it.
+
 {
 
     private Rigidbody2D rbody;
