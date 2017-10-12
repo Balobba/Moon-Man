@@ -28,6 +28,7 @@ public class LoadBossSceneOnTrigger : MonoBehaviour { //This script is to change
 
             playerCntrl.playerMovementSpeed = playerCntrl.playerMovementSpeed * 1.5f; //Increases player movementspeed in bossfight
             playerHealth.oxygenLossValue = 0f; //Stops decreasing of oxygen
+            playerHealth.playerCurrentOxygen = playerHealth.playerMaxOxygen;
             playerHealth.SetMaxHealth(); //fills up health to max
 
             
