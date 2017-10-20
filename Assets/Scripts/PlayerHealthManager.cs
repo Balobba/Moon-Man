@@ -48,7 +48,7 @@ public class PlayerHealthManager : MonoBehaviour
 
     void Update()
     {
-
+        /*
         if (Input.GetKeyDown(KeyCode.R))
         {
             playerCurrentHealth = 0;
@@ -56,7 +56,7 @@ public class PlayerHealthManager : MonoBehaviour
 
         }
 
-
+    */
 
         if (playerCurrentHealth <= 0)
         {

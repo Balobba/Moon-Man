@@ -71,11 +71,12 @@ public class GameManager : MonoBehaviour //The game manager that controlls the s
 
         }
 
+        /*
         if (Input.GetKeyDown(KeyCode.Q))
         {
             SceneManager.LoadScene(1);
 
-        }
+        }*/
 
 
     }
